@@ -1,0 +1,27 @@
+Q:Is it bigger than a breadbox?
+Q:Is it edible?
+Q:Is it used in school?
+Q:Is it used in a game of poker?
+Q:Is it round?
+Q:Can you call friends with it?
+A:a camcorder
+A:a phone
+A:a ping pong ball
+A:a poker chip
+A:an erasor
+A:spam
+Q:Is it human?
+Q:Does it have fur?
+Q:Does it roll?
+Q:Does it have legs?
+Q:Do you lay on it?
+Q:Do you cook on it?
+Q:Does it live in the ocean?
+A:a trashcan
+A:a shark
+A:a stove
+A:a mattress
+A:a chair
+A:a car
+A:a lion
+A:a computer scientist

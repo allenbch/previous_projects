@@ -1,0 +1,20 @@
+﻿1. Victoria Mannina, PID: A10076744, login: cs12efp
+2. no known problems
+
+
+My tests for MyLinkedList:
+1. testAddException - Tests out of bounds exception on add(int index, E data)
+2. testAddNullException - Tests the null pointer exception on add(int index, E data)
+3. testAddNullExceptionAgain - Tests null pointer exception on add(E data)
+4. testSetExceptionIndex - Tests out of bounds exception on set(int index, E data)
+5. testSetExceptionNull - Tests null pointer exception on set(int index, E data)
+6. testRemoveException - Tests out of bounds exception on remove(int index)
+7. testRemove - Tests that remove(int index) works correctly
+8. testClear - Tests that clear() works correctly
+9. testGet - Tests that get() works for indexes other than head
+10. testAddAndSize - Tests that size() increases after we add an element
+
+
+My tests for MyListIterator:
+1. testItAddException - Tests null pointer exception on add(E e)
+2.testItSetException - Tests null pointer exception on set(E e)

@@ -1,0 +1,147 @@
+﻿CSE 12 Homework 3
+Victoria Mannina
+A10076744
+Section A00
+4/21/14
+
+
+Part 1A
+1. True
+2. True
+3. False
+4. False
+5. False
+6. True
+7. False
+8. True
+9. False
+10. False
+11. True
+12. True
+13. True
+14. True
+15. False
+16. True
+17. False
+18. True
+
+
+Part 1B
+1. Running Time: O(n)
+Explanation: There is a single loop that runs n/2 times. Each time the loop runs it executes 1 instruction in the loop header and 1 instruction in the body of the loop. The total number of instructions is (2n/2)+1 (for the last loop check) = n+1 = O(n).
+2. Running Time: O(n)
+Explanation: There is a single loop that runs sqrt(n) times. Each time the loop runs it executes 1 instruction, so the total number of instructions executed is O(n).
+3. Running Time: O(n^2)
+Explanation: There are two loops. The first runs n+1 times. The inner nested loop runs (n+1)^2 times because each time the first loop runs, it executes n+1 instructions in the inner loop. The total number of instructions is n+1 + 2*(n+1)^2 = O(n^2).
+4. Running Time: O(n)
+Explanation: There are two loops that are NOT nested. Each time the first loop runs it executes 1 instruction in the loop header and 1 instruction in the body of the loop. The second loop also executes 1 instruction in the loop header and 1 instruction in the body of the loop each time it is run. The total number of instructions is 2n+1+2n+1 = 4n +2 = O(n).
+5. Running Time: O(n)
+Explanation: There is a single loop that runs 2*n times. Each time the loop runs it executes 1 instruction in the loop header and 1 instruction in the body of the loop. The total number of instructions is 2(2n)+1 = 4n+1 = O(n).
+6. Running Time: O(n^2)
+Explanation: There is a single loop that runs n^2 times. Each time the loop runs it executes 1 instruction in the loop header and 1 instruction in the body of the loop. The total number of instructions is 2(n^2)+1 = O(n^2).
+7. Running Time: O(n^3)
+Explanation: There are two loops, one nested in the other. The outside loop runs n times. The inner loop runs n*(n^2) times because it runs n^2 times each time it is called from the outer loop, which is n times. Each time the inner loop runs it executes 1 instruction in the loop header and 1 instruction in the body of the loop. The total number of instructions is n+1+2n^3+1 = n^3 + n +2 = O(n^3).
+8. Running Time: O(n)
+Explanation: There are two loops, one nested in the other. The outside loop runs n times. The inner loop runs 10,000 times each time it is called from the outer loop, which is n times. Therefore it runs 10000*n+1 times. Each time the inner loop runs it executes 1 instruction in the loop header and 1 instruction in the body of the loop. The total number of instructions is n+1+2(10000n)+1 = 20001n+2 = O(n).
+
+
+Part 2
+1. Running Time: Omega(n)
+Explanation: You have to create a new node and run through each element in the list to copy. This could not be any smaller because in order to copy the list, you must run through each element in the list.
+2. Running Time: Omega(1)
+Explanation: You have a pointer to the tail node in the list, so adding an element involves creating a new node (which is not dependent on the length of the list), setting the links in the new node, and changing the values of the tail references. This takes somewhere around 10 steps to perform, and 10 = Omega(1).
+3. Running Time: Omega(1)
+Explanation: You have a pointer to the head node in the list, so removing the first value involves changing the values of the head references and changing the references in the element being removed. This takes somewhere around 8 steps to perform, and 8 = Omega(1).
+4. Running Time: Omega(1)
+Explanation: You have a pointer to the tail node in the list, so removing the last value involves changing the values of the tail references and changing the references in the node being removed. This takes somewhere around 8 steps to perform, and 8 = Omega(1).
+5. Running Time: Omega(n)
+Explanation: To determine whether the list contains some value V, you have to move through each element in the list (hence Omega(n) because you must move through the length of the list) and checking it against the value you are looking for. There is no way for this to be faster, because you must go through the length of the list to find the value. This takes at least 2n+1 steps, and 2n+1 = Omega(n).
+
+
+Part 3
+Question 1
+A. command: wc medium-wordlist.txt
+output: 119805  119805 1146872 medium-wordlist.txt
+The second column, 119805, gives the number of words in the file medium-wordlist.txt
+B.  main()
+        doLoops(MyLinkedList, wordlist, input file, loop bounds and steps)
+                doWork(MyLinkedList, wordlist, input file, loops bounds and steps)
+                        trimPunctuation(word to take off punctuation from)
+                        trimPunctuation(input.next() which is going through the file and trimming punctuation)
+        doLoops(MRUList, wordlist, input file, loop bounds and steps)
+                doWork(MyLinkedList, wordlist, input file, loops bounds and steps)
+                        trimPunctuation(word to take off punctuation from)
+                        trimPunctuation(input.next() which is going through the file and trimming punctuation)
+C. HashSet is defined in java.util. It implements Collection<E> and Set<E>. I think good and goodwords.size() are different because
+D. Yes, I think this will make a difference to the overall performance because it will be able to increment through the ASCII codes easily and will not have to go through every letter to find the next word.
+
+
+Question 2
+Wordlist: small-wordlist.txt  Document: pride-and-prejudice.txt
+Class: MyLinkedList
+=======================================
+  1:    5000 words in     289 milliseconds
+  2:   10000 words in     531 milliseconds
+  3:   15000 words in     909 milliseconds
+  4:   20000 words in    1282 milliseconds
+  5:   25000 words in    1463 milliseconds
+
+
+Wordlist: small-wordlist.txt  Document: pride-and-prejudice.txt
+Class: MRUList
+=======================================
+  1:    5000 words in     114 milliseconds
+  2:   10000 words in     167 milliseconds
+  3:   15000 words in     263 milliseconds
+  4:   20000 words in     326 milliseconds
+  5:   25000 words in     440 milliseconds
+
+
+Question 3
+Yes, this holds true for my observations f the first few, but then the time decreases as we continue to double the size of m. This happens for both MyLinkedList and MRUList, although MRUList is significantly faster in comparison. I think this is because it is faster the more times it runs to a point.
+
+
+Question 4
+Wordlist: medium-wordlist.txt  Document: pride-and-prejudice.txt
+Class: MyLinkedList
+=======================================
+  1:    1000 words in    1149 milliseconds
+  2:    2000 words in    2547 milliseconds
+  3:    3000 words in    3611 milliseconds
+  4:    4000 words in    8830 milliseconds
+
+
+Wordlist: medium-wordlist.txt  Document: pride-and-prejudice.txt
+Class: MRUList
+=======================================
+  1:    1000 words in     463 milliseconds
+  2:    2000 words in     446 milliseconds
+  3:    3000 words in    1479 milliseconds
+  4:    4000 words in    2704 milliseconds
+
+
+This drastically changes the performance of each type of list by making them both take much longer. I think this is because it is running over a much larger file.
+
+
+Question 5
+Wordlist: pride-and-prejudice.txt  Document: pride-and-prejudice.txt
+Class: MyLinkedList
+=======================================
+  1:    5000 words in     524 milliseconds
+  2:   10000 words in    1039 milliseconds
+  3:   15000 words in    1698 milliseconds
+  4:   20000 words in    2149 milliseconds
+  5:   25000 words in    2641 milliseconds
+
+
+Wordlist: pride-and-prejudice.txt  Document: pride-and-prejudice.txt
+Class: MRUList
+=======================================
+  1:    5000 words in     474 milliseconds
+  2:   10000 words in     895 milliseconds
+  3:   15000 words in    1386 milliseconds
+  4:   20000 words in    1778 milliseconds
+  5:   25000 words in    2254 milliseconds
+
+
+Although using the same textfile for both the wordlist and the document, I do not notice anything special about this run time. It is possible my performance is strange because I am running on a lab computer on Monday afternoon. I cannot run on anything other than the lab machine. I believe it should be working faster because it is being compared to itself.

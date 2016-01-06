@@ -1,0 +1,73 @@
+﻿Victoria Mannina
+A10076744
+Section A00
+5/13/14
+
+
+Part 2
+I.
+1. Heap
+   1. For HeapSort12 I chose to start at 10000 words and increment by 10000 words over 5 iterations because the default was not large enough for me to get conclusive data.
+
+
+Document: random-strings.txt
+ sortAlg: 4
+=======================================
+  1:   10000 words in      16 milliseconds
+  2:   20000 words in      13 milliseconds
+  3:   30000 words in      21 milliseconds
+  4:   40000 words in      31 milliseconds
+  5:   50000 words in      39 milliseconds
+   1. Using the data points of 20000 and 40000 words, I’d say the complexity is O(nlogn) because as the word count doubles, the time goes over double but not closely enough to say O(n).
+II.
+1. Insertion
+   1. For Insertion I chose to start with 20000 and increment with 20000 over 5 iterations. I chose this large number because I felt the default setting did not run long enough to give good results.
+
+
+Document: random-strings.txt
+         sortAlg: 1
+=======================================
+          1:   20000 words in      30 milliseconds
+          2:   40000 words in     103 milliseconds
+          3:   60000 words in     222 milliseconds
+          4:   80000 words in     394 milliseconds
+          5:  100000 words in     621 milliseconds
+
+
+
+
+   1. Using the data points of 40000 words to 80000 words, I’d say the complexity is O(n^2) because as the size doubles, the time quadruples.
+
+
+II.
+1. Heap
+   1. I now chose to start with 30000 and increment with 30000 words over 5 iterations. I felt this gave me better information to analyze the run time with.
+
+
+        Document: random-strings-sorted.txt
+ sortAlg: 4
+=======================================
+  1:   30000 words in      25 milliseconds
+  2:   60000 words in      34 milliseconds
+  3:   90000 words in      58 milliseconds
+  4:  120000 words in      76 milliseconds
+  5:  150000 words in      90 milliseconds
+
+
+   1. Once again, I would say the complexity is O(nlogn) because, based on the data points 60000 to 120000, as the words double the time slightly more than doubles.
+1. Insertion
+   1. For Insertion I now chose to start with 10000 and increment with 10000 over 5 iterations. This seemed large enough to give me a good output.
+
+
+ Document: random-strings-sorted.txt
+ sortAlg: 1
+=======================================
+  1:   10000 words in       9 milliseconds
+  2:   20000 words in      19 milliseconds
+  3:   30000 words in      28 milliseconds
+  4:   40000 words in      38 milliseconds
+  5:   50000 words in      47 milliseconds
+   1. Using the 10000 words and 20000, and 20000 and 40000, as data points, I’d say the complexity is O(n) because as the words double, the time doubles.
+
+
+III. They are fundamentally different on a pre-sorted file because Insert only has to move through the ArrayList and see that each item is already in place whereas HeapSort still has to make other calls.

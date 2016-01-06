@@ -1,0 +1,9 @@
+Q:Is it bigger than a breadbox?
+Q:Do you eat it with eggs?
+Q:h
+A:a mouse
+A:ok
+A:spam
+Q:Is it worth a lot of money?
+A:a bag of trash
+A:a computer scientist

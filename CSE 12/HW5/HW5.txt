@@ -1,0 +1,103 @@
+﻿CSE 12 Homework 5
+Victoria Mannina
+A10076744
+A00
+5/5/14
+
+
+Part 2
+I.
+1. Bubble
+   1. For Bubble I chose to start with 5000 and increment with 5000 over 5 iterations. I chose this because I noticed that Bubble ran longer than the other sorting algorithms on the default settings.
+   2. Document: random-strings.txt
+sortAlg: 0
+=======================================
+           1:    5000 words in     232 milliseconds
+  2:   10000 words in     842 milliseconds
+  3:   15000 words in    1840 milliseconds
+  4:   20000 words in    3510 milliseconds
+  5:   25000 words in    5228 milliseconds
+   1. Using the data points of 10000 words to 20000 words, I’d say the complexity is O(n^2) because as we double, the size quadruples. When we triple the size from 5000 to 15000, the time multiplies times 9.
+1. Insertion
+   1. For Insertion I chose to start with 20000 and increment with 20000 over 5 iterations. I chose this large number because I felt the default setting did not run long enough to give good results.
+   2. Document: random-strings.txt
+         sortAlg: 1
+=======================================
+          1:   20000 words in      30 milliseconds
+          2:   40000 words in     103 milliseconds
+          3:   60000 words in     222 milliseconds
+          4:   80000 words in     394 milliseconds
+          5:  100000 words in     621 milliseconds
+   1. Using the data points of 40000 words to 80000 words, I’d say the complexity is O(n^2) because as the size doubles, the time quadruples.
+1. Merge
+   1. For Merge I chose to start with 50000 and increment with 50000 over 5 iterations. I chose this large number because I felt the default settings did not run long enough to  give good results.
+   2. Document: random-strings.txt
+         sortAlg: 2
+=======================================
+  1:   50000 words in      26 milliseconds
+  2:  100000 words in      52 milliseconds
+  3:  150000 words in      94 milliseconds
+  4:  200000 words in     115 milliseconds
+  5:  250000 words in     116 milliseconds
+   1. Using the data points of 50000 words to 100000 words, and also 100000 words to 200000 words, I’d say the complexity is about O(n) because as the number of words doubles, the time also doubles.
+1. Quick
+   1. For Quick I chose to start with 100000 and increment with 100000 over 5 iterations. I felt like the default setting did not run long enough to give good results.
+   2. Document: random-strings.txt
+ sortAlg: 3
+=======================================
+  1:  100000 words in      51 milliseconds
+  2:  200000 words in      92 milliseconds
+  3:  300000 words in      92 milliseconds
+  4:  400000 words in      95 milliseconds
+  5:  500000 words in      94 milliseconds
+   1. Using all the data points (besides the first run), I see that the time remains the same even though we are drastically increasing the number of words each iteration. For this reason, I’d say the complexity is O(log(n)).
+II.
+1. Bubble
+   1. For Bubble I now choose to start with 50000 and increment with 50000 over 5 iterations. I noticed that now Bubble was running much, much faster.
+Document: random-strings-sorted.txt
+ sortAlg: 0
+=======================================
+  1:   50000 words in      16 milliseconds
+  2:  100000 words in      32 milliseconds
+  3:  150000 words in      48 milliseconds
+  4:  200000 words in      64 milliseconds
+  5:  250000 words in      65 milliseconds
+   1. Using the 50000 words and 100000, and 100000 and 200000, as data points, I’d say the complexity is O(n) because as the words double, the time doubles.
+1. Insertion
+   1. For Insertion I now chose to start with 10000 and increment with 10000 over 5 iterations. This seemed large enough to give me a good output.
+   2.  Document: random-strings-sorted.txt
+ sortAlg: 1
+=======================================
+  1:   10000 words in       9 milliseconds
+  2:   20000 words in      19 milliseconds
+  3:   30000 words in      28 milliseconds
+  4:   40000 words in      38 milliseconds
+  5:   50000 words in      47 milliseconds
+   1. Using the 10000 words and 20000, and 20000 and 40000, as data points, I’d say the complexity is O(n) because as the words double, the time doubles.
+1. Merge
+   1. For Merge I now chose to start with 10000 and increment with 10000 over 5 iterations. This seemed large enough to give me a good output.
+Document: random-strings-sorted.txt
+ sortAlg: 2
+=======================================
+  1:   10000 words in      77 milliseconds
+  2:   20000 words in     166 milliseconds
+  3:   30000 words in     255 milliseconds
+  4:   40000 words in     352 milliseconds
+  5:   50000 words in     445 milliseconds
+   1. Using the 10000 words and 20000, and 20000 and 40000 data points, I’d say the complexity is O(n) because as the words double, the time doubles.
+1. Quick
+   1. For Quick I now chose to start with 5000 and increment with 5000 over 5 iterations. Quick was working extremely slowly on this new file.
+   2. Document: random-strings-sorted.txt
+ sortAlg: 3
+=======================================
+  1:    5000 words in     112 milliseconds
+  2:   10000 words in     335 milliseconds
+  3:   15000 words in     686 milliseconds
+  4:   20000 words in    1353 milliseconds
+  5:   25000 words in    1848 milliseconds
+   1. Using the 10000 words and 20000 words as data points, I’d say the complexity is O(n^2) because as the words double, the time about quadruples.
+III. In the pre-sorted cases, we now have the best case. This is why the first three algorithms have O(n). The Quick Sort, however, is now the slowest because it is now the worst case at O(n^2).
+
+
+Part 3
+1. The method binSearch searches the ArrayList to find where to insert the target such that sarray[i]<=target and sarray[i]>=target  where i is the index at which to insert the target. The space complexity of classic InsertionSort is O(1) because it requires no extra space is needed for the algorithm to complete. The space complexity of modified InsertionSort is O(n) because we are using an additional array of size n.
